@@ -11,7 +11,7 @@ public class TestJob implements Job {
 	private static Logger LOGGER = LoggerFactory.getLogger(TestJob.class);
 
    public void execute(JobExecutionContext jExeCtx) throws JobExecutionException {
-	   LOGGER.debug("TestJob run successfully...");
+	   LOGGER.debug("TestJob run successfully");
    }
 
 }
