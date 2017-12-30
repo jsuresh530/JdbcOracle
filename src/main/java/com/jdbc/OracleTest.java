@@ -1,10 +1,10 @@
-package com;
+package com.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class OracleTest {
 
@@ -34,8 +34,8 @@ public class OracleTest {
 	        	
 	            connection = DriverManager.getConnection(
 	                    instance.getValue("url"), instance.getValue("user"), instance.getValue("password"));
-	            Statement stmt=connection.createStatement();  
-	            ResultSet rs=stmt.executeQuery("select * from emp");  
+	            PreparedStatement stmt=connection.prepareStatement("select * from emp");  
+	            ResultSet rs=stmt.executeQuery();  
 	            while(rs.next())  
 	            System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));  
 
