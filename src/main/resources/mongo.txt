@@ -1,0 +1,30 @@
+mongod to start the server....
+mongo to connect to the server.
+
+https://docs.mongodb.com/manual/reference/mongo-shell/#mongo-shell-command-history
+
+show dbs
+use dbname , 
+show collections /show tables, 
+db.Channel.find(), 
+db.Channel.find().pretty()
+
+show users
+show profile
+show roles
+load()
+
+
+db.collection.insertOne()
+db.collection.insertMany()
+db.collection.updateOne()
+db.collection.updateMany()
+db.collection.save()	
+
+
+
+var collections = db.getCollectionNames();
+for(var i = 0; i< collections.length; i++) {    
+   print('Collection: ' + collections[i]); // print the name of each collection
+   db.getCollection(collections[i]).find().forEach(printjson); //and then print     the json of each of its elements
+}
