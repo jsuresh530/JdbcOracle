@@ -14,7 +14,7 @@ public class SimpleLogic
 		System.out.println(""+s);
 		
 		int result =11; result  /=2;
-		System.out.println("result. is"+result);
+		System.out.println("result. is ---> "+result);
 		System.out.println("Java is not a drink.");
 	}
 
